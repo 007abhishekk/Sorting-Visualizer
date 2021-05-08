@@ -1,5 +1,5 @@
 # Sorting-Visualizer
-Great way to visualize all the generally sorting algorithms.
+Great way to visualize all the generally used sorting algorithms.
 
 Includes : 
 1. Bubble Sort, 
