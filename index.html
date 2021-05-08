@@ -13,28 +13,37 @@
       integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
       crossorigin="anonymous"
     />
-    <script type = "module" src="insertion.js"></script>
-    <script type = "module" src="bubble.js"></script>
-    <script type = "module" src="sorting.js"></script>
-    <script type = "module" src="selection.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <h1 style="color: white">Sorting Visualiser</h1>
       <div class="left">
         <button class="btn btn-dark new_array">New Array</button>
+        <span class = "sliders" >
+          <input type = "range" min = "1" max = "100" step = "1" value = "50" class = "quantity">
+          <input type = "range" min = "1" max = "1000" step = "50" value = "50" class = "speed">
+        </span>
+
       </div>
       <div class="right">
         <button class="btn btn-dark insertion">Insertion Sort</button>
         <button class="btn btn-dark bubble">Bubble Sort</button>
         <button class="btn btn-dark selection">Selection Sort</button>
+        <button class="btn btn-dark quick">Quick Sort</button>
+        <button class="btn btn-dark merge">Merge Sort</button>
       </div>
       
     </nav>
-
+    
     <div id = "bars" class="bars container">
-        
+      
     </div>
-
+    
+    <script type = "module" src="bubble.js"></script>
+    <script type = "module" src="sorting.js"></script>
+    <script type = "module" src="insertion.js"></script>
+    <script type = "module" src="selection.js"></script>
+    <script type = "module" src="quick.js"></script>
+    <script type = "module" src="merge.js"></script>
   </body>
 </html>

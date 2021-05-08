@@ -1,4 +1,5 @@
 const bubble = document.querySelector('.bubble')
+const speed = document.querySelector('.speed');
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -21,7 +22,7 @@ const swap = (e1, e2) => {
 }
 
 /* TODO: revise about async-await */
-/* TODO: Complete other sorting modules */
+
 const sort = async() => {
     const array = document.querySelectorAll('.bar')
     const n = array.length;
@@ -32,7 +33,7 @@ const sort = async() => {
             array[j].style.backgroundColor = "red";
             array[j + 1].style.backgroundColor = "red";
             
-            await sleep(1);
+            await sleep(speed.value);
             swap(array[j], array[j + 1]);
             
             /* check done */
