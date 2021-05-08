@@ -1,5 +1,5 @@
 const merge = document.querySelector(".merge");
-const speed = document.querySelector('.speed');
+const speed = document.querySelector(".speed");
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -9,14 +9,21 @@ const INT = (px) => {
   return parseInt(px, 10);
 };
 
-
 const sort = async () => {
   const array = document.querySelectorAll(".bar");
   let n = array.length;
 
+  const mark = (l, r, color) => {
+    for (let i = l; i <= r; ++i) {
+      array[i].style.backgroundColor = color;
+    }
+  };
+
   const merge = async (l_left, r_left, l_right, r_right) => {
     let L = l_left,
       R = l_right;
+
+    mark(l_left, r_right, "blue");
     for (; L <= r_left && R <= r_right; ) {
       let leftValue = INT(
         window.getComputedStyle(array[L]).getPropertyValue("height")
@@ -42,9 +49,7 @@ const sort = async () => {
         R++;
       }
     }
-    for (let i = l_left; i <= r_right; i++) {
-      array[i].style.backgroundColor = "green";
-    }
+    mark(l_left, r_right, "green");
   };
 
   const mergeSort = async (left, right) => {

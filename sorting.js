@@ -1,10 +1,11 @@
 const main = document.querySelector(".bars");
 const new_array = document.querySelector(".new_array");
-const speed = document.querySelector('.speed');
-const quantity = document.querySelector('.quantity');
+const speed = document.querySelector(".speed");
+const quantity = document.querySelector(".quantity");
+var arr_size = 100;
 
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 // const display = async (n) => {
@@ -29,12 +30,13 @@ function sleep(ms) {
 // }
 
 const generateArray = (n) => {
+  arr_size = n;
   const width = 100 / n;
   const array = [];
   const divs = document.getElementById("bars");
 
   while (divs.firstChild) divs.removeChild(divs.firstChild);
-  
+
   for (let i = 0; i < n; ++i) {
     array.push(Math.ceil(Math.random() * 500));
   }
@@ -51,5 +53,5 @@ const generateArray = (n) => {
   // display(n);
 };
 
-quantity.addEventListener('input', () => generateArray(quantity.value));
-new_array.addEventListener("click", () => generateArray(75));
+quantity.addEventListener("input", () => generateArray(quantity.value));
+new_array.addEventListener("click", () => generateArray(arr_size));

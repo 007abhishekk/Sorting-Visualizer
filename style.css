@@ -3,10 +3,11 @@ body {
     color: white !important;
 }
 
+/* TODO: add media queries for nav */
+
 button {
     border: 1px solid yellow !important;
 }
-
 
 nav {
     position: flex;
