@@ -40,10 +40,11 @@ const sort = async () => {
           await sleep(speed.value);
           array[r].style.height = array[r - 1].style.height;
 
-          array[r].style.backgroundColor = "pink";
+          array[r].style.backgroundColor = "green";
           array[r - 1].style.backgroundColor = "pink";
         }
         array[L].style.height = parseInt(rightValue) + "px";
+        array[L].style.backgroundColor = "green";
         L++;
         r_left++;
         R++;

@@ -58,6 +58,8 @@ const sort = async() => {
             }
             else break;
         }
+        
+        array[i].style.backgroundColor = "green";
     }
 }
 
