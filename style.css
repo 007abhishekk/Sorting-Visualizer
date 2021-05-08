@@ -6,6 +6,8 @@ body {
 /* TODO: add media queries for nav */
 
 button {
+    position: relative;
+    top: 10px;
     border: 1px solid yellow !important;
 }
 
@@ -27,8 +29,10 @@ nav {
 }
 
 .sliders {
+    position: relative;
     width: 100%;
     margin: 20px;
+    top: 10px;
 }
 
 .bars {
