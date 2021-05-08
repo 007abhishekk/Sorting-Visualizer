@@ -1,0 +1,37 @@
+body {
+    background-color: black !important;
+    color: white !important;
+}
+
+button {
+    border: 1px solid yellow !important;
+}
+
+
+nav {
+    position: flex;
+    flex-direction: column;
+}
+
+.left {
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.right {
+    position: absolute;
+    right: 0;
+    
+}
+
+.bars {
+    display: flex;
+    flex-direction: row;
+}
+
+.bar {
+    background-color: pink;
+    margin: 0px 2px;
+    border: 2px solid green;
+}
